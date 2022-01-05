@@ -80,3 +80,4 @@ let currentLocationButton = document.querySelector("#locationicon");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("London");
+
