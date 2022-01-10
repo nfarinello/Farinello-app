@@ -37,15 +37,17 @@ let today = document.querySelector(".date");
 today.innerHTML = `${todayDate(now)}`;
 
 function showWeather(response) {
-  document.querySelector("#city-location").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city-location");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("Wind2");
 
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = response.data.main.speed;
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+  cityElement.innerHTML = response.data.name;
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function searchCity(city) {
@@ -58,14 +60,6 @@ function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#FormInput").value;
   searchCity(city);
-}
-function searchLocation(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let apiKey = "c595bc8ebc431dbd30d2c1dfc8888296";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(showWeather);
 }
 
 function getCurrentLocation(event) {
@@ -80,4 +74,3 @@ let currentLocationButton = document.querySelector("#locationicon");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("London");
-
