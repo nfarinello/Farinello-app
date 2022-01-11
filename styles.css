@@ -13,7 +13,7 @@
 body {
   background-color: #d6e6f2;
   text-align: center;
-  margin: 30px auto;
+  margin: 20px auto;
   padding: 20px;
   max-width: 600px;
   display: block;
@@ -37,7 +37,7 @@ h3 {
   font-family: "Pathway Gothic One", sans-serif;
   font-size: 25px;
   max-width: 400px;
-  margin: 20px auto;
+  margin: 0px auto;
   border-radius: 10px;
   transition: all 200ms ease-in-out;
 }
@@ -82,7 +82,7 @@ button {
   font-family: "Pathway Gothic One", sans-serif;
   font-size: 15px;
   max-width: 400px;
-  margin: 40px auto;
+  margin: 0px auto;
   border-radius: 20px;
   transition: all 200ms ease-in-out;
 }
@@ -96,15 +96,15 @@ button:hover {
 form {
   max-width: 700px;
   font-size: 10px;
-  padding: 25px 25px;
+  padding: 20px 10px;
 }
 
 .date {
   font-size: 40px;
-  padding: 20px 20px;
+  padding: 10px 10px;
   background: #769fcd;
   font-family: "Pathway Gothic One", sans-serif;
-  margin: 10px auto;
+  margin: 0px auto;
 }
 
 .humidity1 {
@@ -137,4 +137,36 @@ li {
 ul {
   margin: 0;
   padding: 0;
+}
+
+.title-3 {
+  font-size: 60px;
+}
+
+.units {
+  font-size: 60px;
+}
+
+.float-left {
+  display: 0px auto;
+  padding: 0px auto;
+}
+
+.weather-forecast {
+  margin-top: 1px;
+  text-align: center;
+  color: #000;
+}
+
+.weather-forecast-date {
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 20px;
 }

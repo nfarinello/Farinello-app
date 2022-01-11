@@ -38,22 +38,22 @@
         />
     </form>
     <button name="search1">Search</button>
-    <button name="search2"><i class="fas fa-map-marker-alt" id="locationicon"></i>
-
-    </button>
   </div>
   <div class="container"></div>
     <h2>
         <i class="fas fa-map-pin"></i>
         <span id="city-location">London</span>
       </h2>
-    <h3 class="title-3" id="temperature">15°C</h3>
-
-     <div class="row">
-<span class="units" ><a href="#" id="celsius-link" class="active">°C</a> |
-                    <a href="#" id="fahrenheit-link">°F</a></span>
-                   
-</div>
+  <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                    <span class="title-3" id="temperature">15°C</span>
+                  <strong id="temperature"></strong><span class="units" id="celsius">°C</span>
+                  </div>
+                  </div>
+                  </div>
     <div class="descript" id="description"> Partly Cloudy </div>
 
     <div class ="col-6">
@@ -66,6 +66,8 @@
       <div class="row align-items-center-2">
 </div>    
 </div>
+<div class="weather-forecast" id="forecast"></div>
+
 <small>
           <a
             href="https://github.com/nfarinello/Farinello-app/tree/weather-app"
