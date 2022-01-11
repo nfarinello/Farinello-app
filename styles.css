@@ -13,7 +13,7 @@
 body {
   background-color: #d6e6f2;
   text-align: center;
-  margin: 20px auto;
+  margin: 30px auto;
   padding: 20px;
   max-width: 600px;
   display: block;
@@ -156,6 +156,7 @@ ul {
   margin-top: 1px;
   text-align: center;
   color: #000;
+  max-width: 600px;
 }
 
 .weather-forecast-date {
